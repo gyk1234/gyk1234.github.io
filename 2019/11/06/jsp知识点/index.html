@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>java面向对象总结 | gyk</title>
+  <title>jsp知识点 | gyk</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="gyk1234,gyk1234's Blog" />
   
-  <meta name="description" content="java面向对象">
+  <meta name="description" content="*jsp原理：(jsp就是Servlet)   在我们访问jsp文件的时候，并没有直接去执行JSP文件，而是被服务器所拦截执行了jspServlet的类。此类会将jsp文件转译成对应的Servlet文件并执行。所以jsp本质还是Servlet。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="java面向对象总结">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93&#x2F;index.html">
+<meta property="og:title" content="jsp知识点">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;jsp%E7%9F%A5%E8%AF%86%E7%82%B9&#x2F;index.html">
 <meta property="og:site_name" content="gyk">
-<meta property="og:description" content="java面向对象">
+<meta property="og:description" content="*jsp原理：(jsp就是Servlet)   在我们访问jsp文件的时候，并没有直接去执行JSP文件，而是被服务器所拦截执行了jspServlet的类。此类会将jsp文件转译成对应的Servlet文件并执行。所以jsp本质还是Servlet。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-11-06T02:35:21.086Z">
+<meta property="og:updated_time" content="2019-11-06T02:58:22.339Z">
 <meta name="twitter:card" content="summary">
   
   
@@ -107,14 +107,14 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-java面向对象总结" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-jsp知识点" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="post-title" itemprop="name">
-      java面向对象总结
+      jsp知识点
     </h1>
     <div class="post-title-bar">
       <ul>
@@ -136,116 +136,76 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <p><strong>java面向对象</strong></p>
+            <p>*jsp原理：(jsp就是Servlet)</p>
+<p>  在我们访问jsp文件的时候，并没有直接去执行JSP文件，而是被服务器所拦截执行了jspServlet的类。此类会将jsp文件转译成对应的Servlet文件并执行。所以jsp本质还是Servlet。</p>
  <a id="more"></a>
 
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jsp原理：</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">第二章   类和对象</span><br></pre></td></tr></table></figure>
+<p>(jsp就是Servlet)  在我们访问jsp文件的时候，并没有直接去执行JSP文件，而是被服务器所拦截执行了jspServlet的类。此类会将jsp文件 转译成对应的Servlet文件并执行。所以jsp本质还是Servlet。   </p>
+<p>jsp的使用： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1、常用指令集：</span><br></pre></td></tr></table></figure>
 
-<p>1、面向对象的概念：<br>面向对象是把一个项目，一件事情，从头到尾一步一步执行，直到结束。<br>2、类的创建<br>public class 类名{}<br>File——&gt;new –&gt;class –&gt;类名<br>3、创建对象<br>类名 对象名=new 类名();<br>对象名.方法名();   对象名.属性<br>4、构造方法<br>方法名和类名相同，无返回值<br>public class 类名{<br>    public 类名(){}//主要的作用是初始化操作<br>}<br>5、构造方法的重载<br>在同一个类中，方法名相同，参数个数，顺序，类型不同的构造方法<br>public class 类名{<br>    public 类名(String Name，int age){}<br>}<br>6、构造方法的执行<br>（1）、new 类名();—&gt;执行<br>（2）、Super();—&gt;执行父类<br>7、static<br>静态修饰符可以修饰属性，方法，代码块<br>类名.属性      类名.方法名<br>8、Java内存(gc（垃圾回收机制）)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">第三章   面向对象三大特征--封装</span><br></pre></td></tr></table></figure>
+<p>​     </p>
+<p>page       </p>
+<p>​     language  声明jsp文件支持的语言        </p>
+<p>​     import  转译的时候导入的包         </p>
+<p>​     pageEncoding –&gt;设置转译及客户端展现数据的编码格式         </p>
+<p>​     session –&gt;true代表使用session对象(默认) false不使用session对象         </p>
+<p>​     errorPage –&gt;jsp运行错误会自动跳转到指定的页面    </p>
+<p>include:         </p>
+<p>静态引入：</p>
+<p>​           转译成一个Servlet类(不能出现同名的变量)，耦合性高       </p>
+<p>动态引入：</p>
+<p>​           转译成两个Servlet类(可以出现同名的变量)，耦合性低            </p>
+<p>forward:         </p>
+<p>​            请求转发（自带return）:           </p>
+<p>​               &lt;jsp:forward page=”要转发的文件路径”&gt;             </p>
+<p>​                      &lt;jsp:param value=”值” name=”键”/&gt;          </p>
+<p>​              </jsp:forward>     </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2、java代码段声明</span><br></pre></td></tr></table></figure>
 
-<p>1、封装的概念：把一个对象的属性私有化，同是提供一些可以被外界访问属性的方法<br>2、封装的步骤<br>（1）、把属性私有化（private）<br>（2）、对这些属性设置get和set方法<br>（3）、set赋值，get取值<br>3、封装的作用<br>避免一些不合乎常理的操作<br>4、修饰符<br>public （公共的）在一个项目中都可以访问，权限最高<br>private（私有的）只能在本类中进行访问<br>protected（受保护的）在同一个包中进行访问   在继承中子类可以访问父类<br>defauit（默认的）同一个类，同一个包能访问</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">第四章    面向对象三大特征--继承</span><br></pre></td></tr></table></figure>
+<p>​       &lt;%java代码%&gt;—会被转译到_jspService方法中，局部代码     </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3、全局代码段声明</span><br></pre></td></tr></table></figure>
 
-<p>1、继承的概念<br>父子之间的关系<br>2、继承的关键字：extends<br>3、继承的语法<br>public class 类名 extends 父类{}<br>4、继承的说明<br>（1）、一个父类可以有多个子类，但一个子类只能有父类<br>（2）、子类继承了父类的所有属性和方法，但是只能调用非private属性和方法<br>（3）、可以多层继承<br>5、继承使用<br>在子类中可以直接调用父类的非private属性和方法<br>可以用super.方法   super.属性<br>6、父类构造方法的调用：super();<br>（1）、调用父类的构造方法必须在子类中调用<br>（2）、必须在子类的构造方法的第一行代码<br>7、重写@Ovrride<br>（1）、必须继承<br>（2）、方法名一致，参数个数，顺序，类型全部一致</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">第五章 面向对象（多态）</span><br></pre></td></tr></table></figure>
+<p>​       &lt;%!声明方法%&gt;—-会被转译成全局代码                      </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4、表达式语句(重要)</span><br></pre></td></tr></table></figure>
 
-<p>1.多态的概念</p>
-<p>2.多态的必要条件</p>
-<p>（1）继承</p>
-<p>（2）重写</p>
-<p>（3）父类引用指向子类对象（向上转型）</p>
-<p>3.多态的使用</p>
-<p>public class Father{</p>
-<p>public void cooking(){</p>
-<p>System.out.println(“米饭”);</p>
-<p>}</p>
-<p>}</p>
-<p>public class Son extends Father{</p>
-<p>@Override</p>
-<p>public void cooking(){</p>
-<p>System.out.println(“熬粥”);</p>
-<p>}</p>
-<p>}</p>
-<p>public class Test {</p>
-<p>public static void main(String[] args) {</p>
-<p>Father son=new Son();</p>
-<p>son.cooking();</p>
-<p>}</p>
-<p>}</p>
-<p>4.向下转型</p>
-<p>Son son=(Son)father;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">第六章 抽象</span><br></pre></td></tr></table></figure>
+<p>​       &lt;%=变量名/方法 %&gt;—后面不能加分号        </p>
+<p>注意：一定不要加分号，等价于out.write()，会将里面的值响应给客户端</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5、九大内置对象：</span><br></pre></td></tr></table></figure>
 
-<p>1.抽象的概念</p>
-<p>2.抽象的关键字</p>
-<p>abstract</p>
-<p>可以修饰类，可以修饰方法</p>
-<p>3.抽象的用法</p>
-<p>//抽象类</p>
-<p>public abstract class 类名{</p>
-<p>//抽象方法没有方法体</p>
-<p>public abstract void 方法名();    </p>
-<p>}</p>
-<p>//当父类是抽象类的时候，子类必须重写父类里面的抽象方法</p>
-<p>4.final修饰符：最终的</p>
-<p>修饰变量，修饰方法，修饰类</p>
-<p>1.当修饰变量时，变量转换成常量，常量的值不能改变</p>
-<p>final int a=18;//a=18;不能改变,必须给一个初始值</p>
-<p>2.当修饰方法时，该方法不能被重写</p>
-<p>3.当修饰类时，该类不能被继承</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">第七章 接口</span><br></pre></td></tr></table></figure>
+<p>​       </p>
+<p>四个作用域：         </p>
+<p><strong>pageContext</strong> 页面上下文对象，此对象封装了其他对象的获取方式，当前页(了解)         </p>
+<p><strong>request</strong> 其实就是请求对象，使用方式和Servlet一致         </p>
+<p><strong>session</strong> 其实就是session对象         </p>
+<p><strong>application</strong> 其实就是ServletContext对象       </p>
+<p>两个输出：         </p>
+<p><strong>out</strong> 输出对象         </p>
+<p><strong>response</strong> 输出对象，比resp对象多了缓冲区，效率提高       </p>
+<p>三个打酱油：         </p>
+<p><strong>page</strong> 代表被页面对象         </p>
+<p><strong>config</strong> ServletConfig          </p>
+<p><strong>exception</strong> 异常对象，摒弃了     </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">6、注释</span><br></pre></td></tr></table></figure>
 
-<p>1.接口的概念</p>
-<p>2.接口的关键字</p>
-<p>interface</p>
-<p>3.接口的语法</p>
-<p>public interface 接口名{}</p>
-<p>File—&gt;new—&gt;interface//创建接口</p>
-<p>4.接口的用法</p>
-<p>实现接口的关键字  implements</p>
-<p>public interface 接口名{</p>
-<p>//接口是纯抽象类</p>
-<p>//接口里面的方法都是抽象方法</p>
-<p>void setData();</p>
-<p>}</p>
-<p>public class Play implements 接口名{</p>
-<p>@Override</p>
-<p>void setData(){</p>
-<p>}</p>
-<p>}</p>
-<p>public class Test {</p>
-<p>public static void main(String[] args) {</p>
-<p>Play play=new Play();</p>
-<p>play.setData();</p>
-<p>}</p>
-<p>}</p>
-<p>注意接口可以进行多继承</p>
-<p>public interface 接口名 extends 接口名，接口名{}</p>
-<p>一般用法</p>
-<p>public class 类名 extends 父类 implements 接口，接口{}</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">第八章 集合框架</span><br></pre></td></tr></table></figure>
-
-<p>1.ArrayList</p>
-<p>用法：</p>
-<p>ArrayList list=new ArrayList();</p>
-<p>list.add();//添加数据</p>
-<p>list.get();//获取数据</p>
-<p>2.Map</p>
-<p>用法：</p>
-<p>Map map=new HasMap();</p>
-<p>map.put(key,value);//key不能重复</p>
-<p>map.get(key);//获取key对象的value</p>
-<p>3.泛型</p>
-<p>ArrayList<String> list=new ArrayList&gt;<String>();</p>
-<p>Map&lt;String,String&gt; map=new HasMap&lt;String,String&gt;();</p>
-<p>ArrayList&lt;Map&lt;String,String&gt;&gt; list=new ArrayList&gt;&lt;Map&lt;String,String&gt;&gt;();</p>
+<p>​       </p>
+<p>HTML注释：          </p>
+<p>​           会被转译，还会被发送到客户端        </p>
+<p>css注释：          </p>
+<p>​            会被转译，还会被发送        </p>
+<p>js注释：          </p>
+<p>​           会被转译，还会被发送                    </p>
+<p>java注释          </p>
+<p>​           会被转译             </p>
+<p>jsp注释：          </p>
+<p>​            %– 注释内容 –%  直接不转译</p>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年11月06日 10:35</p>
-        <p>原始链接： <a class="post-url" href="/2019/11/06/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/" title="java面向对象总结">http://yoursite.com/2019/11/06/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/</a></p>
+        <p>最后更新： 2019年11月06日 10:58</p>
+        <p>原始链接： <a class="post-url" href="/2019/11/06/jsp%E7%9F%A5%E8%AF%86%E7%82%B9/" title="jsp知识点">http://yoursite.com/2019/11/06/jsp%E7%9F%A5%E8%AF%86%E7%82%B9/</a></p>
         <footer>
             <a href="http://yoursite.com">
                 <img src="/images/logo.png" alt="gyk">
@@ -302,7 +262,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/11/06/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/&title=《java面向对象总结》 — gyk&pic=http://yoursite.comimages/logo.png" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/11/06/jsp%E7%9F%A5%E8%AF%86%E7%82%B9/&title=《jsp知识点》 — gyk&pic=http://yoursite.comimages/logo.png" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -312,22 +272,23 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/11/06/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/&title=《java面向对象总结》 — gyk&source=java面向对象" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/11/06/jsp%E7%9F%A5%E8%AF%86%E7%82%B9/&title=《jsp知识点》 — gyk&source=*jsp原理：(jsp就是Servlet)
+  在我们访问jsp文件的时候，并没有直接去执行JSP文件，而是被服务器所拦截执行了jspServlet的类。..." data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/11/06/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/11/06/jsp%E7%9F%A5%E8%AF%86%E7%82%B9/" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《java面向对象总结》 — gyk&url=http://yoursite.com/2019/11/06/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/&via=http://yoursite.com" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《jsp知识点》 — gyk&url=http://yoursite.com/2019/11/06/jsp%E7%9F%A5%E8%AF%86%E7%82%B9/&via=http://yoursite.com" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/11/06/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/11/06/jsp%E7%9F%A5%E8%AF%86%E7%82%B9/" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -337,7 +298,7 @@
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" target="_blank" rel="noopener" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2019/11/06/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2019/11/06/jsp%E7%9F%A5%E8%AF%86%E7%82%B9/" alt="微信分享二维码">
 </div>
 
 <div class="mask"></div>
@@ -356,19 +317,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2019/11/06/jsp%E7%9F%A5%E8%AF%86%E7%82%B9/" id="article-nav-newer" class="article-nav-link-wrap">
-
-      <span class="article-nav-title">
-        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
-        
-          jsp知识点
-        
-      </span>
-    </a>
   
-  
-    <a href="/2019/11/05/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">Hello World</span>
+    <a href="/2019/11/06/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">java面向对象总结</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
