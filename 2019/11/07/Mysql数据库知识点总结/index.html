@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Mysql数据库知识点总结 | gyk</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="gyk1234,gyk1234's Blog" />
+  
+  <meta name="description" content="MySQL是一种开放源代码的关系型数据库管理系统（RDBMS），使用最常用的数据库管理语言–结构化查询语言（SQL）进行数据库管理。 MySQL是开放源代码的，因此任何人都可以在General Public License的许可下下载并根据个性化的需要对其进行修改。 MySQL因为其速度、可靠性和适应性而备受关注。大多数人都认为在不需要事务化处理的情况下，MySQL是管理内容最好的选择。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mysql数据库知识点总结">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;07&#x2F;Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93&#x2F;index.html">
+<meta property="og:site_name" content="gyk">
+<meta property="og:description" content="MySQL是一种开放源代码的关系型数据库管理系统（RDBMS），使用最常用的数据库管理语言–结构化查询语言（SQL）进行数据库管理。 MySQL是开放源代码的，因此任何人都可以在General Public License的许可下下载并根据个性化的需要对其进行修改。 MySQL因为其速度、可靠性和适应性而备受关注。大多数人都认为在不需要事务化处理的情况下，MySQL是管理内容最好的选择。">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-11-07T08:22:47.621Z">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">gyk1234&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>Archives</span>
+                    </a>
+                    
+                    <a  href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>About</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        gyk1234&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        一个专注 WEB 开发的技术博客
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="MinHow" target="_blank" href="//minhow.com">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/wongminho">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//weibo.com/WongMinHo">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                        <a title="Twitter" target="_blank" href="//twitter.com/huangminhow">
+                            <i class="fa fa-twitter fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-Mysql数据库知识点总结" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      Mysql数据库知识点总结
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2019-11-07
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <p>MySQL是一种开放源代码的关系型数据库管理系统（RDBMS），使用最常用的数据库管理语言–结构化查询语言（SQL）进行数据库管理。</p>
+<p>MySQL是开放源代码的，因此任何人都可以在General Public License的许可下下载并根据个性化的需要对其进行修改。</p>
+<p>MySQL因为其速度、可靠性和适应性而备受关注。大多数人都认为在不需要事务化处理的情况下，MySQL是管理内容最好的选择。</p>
+ <a id="more"></a>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Mysql数据库知识点总结</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>一、基本概念<ul>
+<li>1、数据库服务器<ul>
+<li>我们可以理解为数据库服务器即是一台内存较高的计算机，可以在上面运行数据库管理软件</li>
+</ul>
+</li>
+<li>2、数据库管理系统<ul>
+<li>如Mysql,是一个软件，用来管理数据库的软件</li>
+</ul>
+</li>
+<li>3、数据库<ul>
+<li>即文件夹，用来组织文件</li>
+</ul>
+</li>
+<li>4、表<ul>
+<li>即文件，用来存放多条记录，每条记录为多个字段组成的一行数据</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>二、Mysql基本介绍<ul>
+<li>Mysql是目前WEB应用最好的RDBMS（Relation Database Mangement System)关系数据库管理系统之一<ul>
+<li>关系型数据库是将数据保存到不同的表里面，而不是将数据放到一个大仓库内</li>
+<li>关系型数据库与非关系型数据库的区别是：关系型数据库有表结构，非关系型数据库是通过key-value存储，无表结构</li>
+<li>Mysql使用的是标准的SQL数据语言形式，支持多种语言，支持5000万条的数据仓库，32位系统表文件最大支持4GB，64位系统最大支持表文件为8TB</li>
+<li>通俗的讲：Mysql就是一个基于socket编写的C/S架构的软件</li>
+<li>储存引擎<ul>
+<li>mysql默认的查询引擎为innodb，可以自行进行更改</li>
+</ul>
+</li>
+<li>语法：<ul>
+<li>win：<ul>
+<li>启动mysql服务端，在cmd窗口运行mysqld</li>
+<li>数据库初始化命令：mysql-initialize-insecure</li>
+<li>启动mysql客户端，并连接服务端mysql -uroot -p</li>
+<li>连接其他ip数据库,mysql -u账号 -hIP地址 -P端口号 -p密码</li>
+<li>查看当前登陆用户：select user( )</li>
+<li>刷新权限，执行命令:flush privileges;</li>
+<li>查看进程：tasklist | findstr mysql</li>
+<li>杀死进程：tasklist /F /PID 进程号</li>
+</ul>
+</li>
+<li>mac：<ul>
+<li>设置新密码：set password for ‘用户名‘@’IP地址’=password(‘’);</li>
+<li>查看系统进程:ps -A</li>
+<li>杀死系统进程：sudo kill -9 PID</li>
+</ul>
+</li>
+<li>操作文件夹（库）:<ul>
+<li>增加一个库：create database db1 charset utf8;</li>
+<li>查看所有库: show databases;</li>
+<li>查看特定库: show create database db1;</li>
+<li>删库跑路: drop database db1;</li>
+</ul>
+</li>
+<li>操作文件（表）：<ul>
+<li>切换进数据库：use db1;</li>
+<li>查看当前所在文件夹；select database( );</li>
+<li>增加表：create table t1(id int,name char(6));</li>
+<li>查看特定表：show create table t1;</li>
+<li>查看所有表：show tables;或者desc t1;</li>
+<li>改：<ul>
+<li>alter table t1 modify name char(10);name字段改为10字节；</li>
+<li>alter table t1 modify name NAME char(10）;name字段名改成NAME</li>
+</ul>
+</li>
+<li>复制表<ul>
+<li>即复制表数据也复制表结构：create table t1 select * from db1.t1;</li>
+<li>只复制表结构create table a1 like db1.t1;</li>
+</ul>
+</li>
+<li>清空表<ul>
+<li>delete from t1;但是这种方法会保留自增的ID</li>
+<li>truncate table t1;这种方法不会保留自增ID</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>操作文件内容<ul>
+<li>增加内容：insert into (id,name) values(1,’aa’),(2,’bb’),(3,’cc’);</li>
+<li>查看内容：select * from db1.t1;</li>
+<li>删除内容：delete from t1 where id =1;</li>
+<li>查看用户权限：select * from mysql.user where user=’root’\G;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>三、SQL数据类型<ul>
+<li>SQL之中没有bool值,tinyint[1]表示true;tinyint[0]表示fasle.</li>
+<li>int数据类型后面存储的是显示宽度，而不是存储宽度，其他的数据类型则表示的是存储宽度</li>
+<li>now（）sql中的内置函数，根据数据类型生成相对应的时间模式</li>
+<li>char( )定长字符串，存储速度快，但是浪费空间</li>
+<li>varchar（ ）变长字符串，存储速度慢，可是节省空间</li>
+<li>enum() 表示枚举 多选一</li>
+<li>set（ ）表示集合 多选多</li>
+</ul>
+</li>
+<li>四、约束：作用是保证数据的完整性和一致性<ul>
+<li>not null 表示该字段数据不能为空</li>
+<li>default 表示该字段的默认值</li>
+<li>unique 唯一（列唯一，组合唯一）</li>
+<li>primary key 主键 一张列表中只允许出现一个主键（not null + unique）</li>
+<li>auto-increment 自增长</li>
+<li>foregin key 外键 建立两个表之间的联系<ul>
+<li>语法 constraint fk_dep foreign key(关联列名) references 被关联表（被关联列）</li>
+<li>on delete cascade 同步删除</li>
+<li>on update cascade 同步更新</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>五、查询：<ul>
+<li>单表查询的关键字执行顺序<ul>
+<li>from 说明是来自那一张表</li>
+<li>where 条件 后面可以跟比较运算符 between and in(. ). like（%表示任意字符 _表示一个字符）逻辑运算符 </li>
+<li>group by 以某个字段的值进行分组，发生在where之后，查看组类信息依赖于聚合函数max min avg sum count</li>
+<li>having 过滤，在group by 后面的条件筛选</li>
+<li>order by 排序 asc升序 desc降序</li>
+<li>limite 限制查询 记录数 limte a, b. a表示从第a个开始，b表示查询b条</li>
+</ul>
+</li>
+<li>多表连接查询<ul>
+<li>语法：select 字段 from t1 inner/left/right join t2 on t1.字段=t2.字段；<ul>
+<li>inner 表示只显示连接匹配的行</li>
+<li>left：优先显示左表的全部记录</li>
+<li>right：优先显示右表的全部记录</li>
+</ul>
+</li>
+<li>子查询中的关键字<ul>
+<li>in/not in：查询的结果是否在子表中</li>
+<li>运算符：= &lt; &gt; !=</li>
+<li>exits:表示存在，使用此关键字时，内层查询语句不返回查询的记录，而是返回一个布尔值，当此布尔值为真时外层语句进查询，反之不进行查询</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>六、pymysql简单使用<ul>
+<li>连接：conn=pymysql.connect(host=’IP’,port=端口号,user=’root’,password=’’,db=db1,charset=’utf8’)</li>
+<li>创建游标：cursor=conn.cursor( )</li>
+<li>写sql语句：sql=‘’</li>
+<li>执行sql语句，返回在数据库中查询成功的记录行数，result=cursor.execute(sql);在result中可以进行字符的拼接，execute（sql,[user,pwd]),即execute注入，防治恶意语法</li>
+<li>使用mysql模块进行增删改操作时需使用commit( )方法进行提交，否则数据库更改不生效;conn.commit( )</li>
+<li>查询操作：fetchone( )获取下一行数据，从第一行开始；fetchall( )获取所有行数据，;fetchany(n)，获取n行数据</li>
+<li>查询操作默认返回的是元组，使用如下语句获取游标，改变cursor属性，会返回字典：cursor=conn.cursor(cursor=pymysql.cursors.DictCursor)</li>
+<li>移动指针：<ul>
+<li>cursor.scroll(1,mode=’relative’)相对定位，相对当前位置向下移动</li>
+<li>cursor.scroll(1,mode=’abusolute’绝对定位，相对左上角向下移动</li>
+</ul>
+</li>
+<li>关闭连接，游标和连接都需要关闭：cursor.close( ). conn.close( )</li>
+</ul>
+</li>
+<li>七、索引<ul>
+<li>索引的作用：约束和加速查找<ul>
+<li>无索引的时候一般会 从前至后一条条查找</li>
+<li>有索引的时候：创建索引的本质就是创造额外的文件，查询时先去额外的文件找，定好位置，再去原始表直接查询，提高查询速度，但是增删改的速度依然慢，创建索引后必须命中索引才有效</li>
+</ul>
+</li>
+<li>索引的分类<ul>
+<li>1、普通索引：加速查询<ul>
+<li>加入索引：create index 索引名 on 表名(列名）</li>
+<li>删除索引: drop index 索引名 on 表名</li>
+<li>查看索引:show index from 表名</li>
+</ul>
+</li>
+<li>2、唯一索引：加速查找和唯一约束（可含null）<ul>
+<li>加入索引：create unique index 索引名 on 表名（列名）</li>
+<li>删除：drop index 索引名 on 表名</li>
+</ul>
+</li>
+<li>3、主键索引<ul>
+<li>加入索引:alter table 表名 add primary key(列名）</li>
+<li>删除索引：alter table 表名 drop primary key（列名）和alter table 表名 modify 列名 int,drop primary key</li>
+</ul>
+</li>
+<li>4、组合索引：将多个列组合成一个索引<ul>
+<li>创建组合索引：create iindex 索引名 on 表名（列1，列2）</li>
+<li>在使用组合索引时，若组合索引为(name,email),单独索引email时不走索引，这称为最左前缀匹配原则，最左匹配原则中，mysql会一直向右匹配知道遇到（&lt; &gt; between like)这一类的范围查询时停止</li>
+</ul>
+</li>
+<li>explain + sql查询语句，用于查询sql执行信息参数</li>
+<li>在使用关键字‘like’查询时：like ‘n%’ 走索引；但是like ‘%n%’不走索引，即有且仅只有后面带上%时走索引</li>
+<li>使用函数时索引不生效</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2019年11月07日 16:22</p>
+        <p>原始链接： <a class="post-url" href="/2019/11/07/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/" title="Mysql数据库知识点总结">http://yoursite.com/2019/11/07/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/</a></p>
+        <footer>
+            <a href="http://yoursite.com">
+                <img src="/images/logo.png" alt="gyk">
+                gyk
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" target="_blank" rel="noopener">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" target="_blank" rel="noopener" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃糖~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat_code.jpg" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/wechat_code.jpg">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/alipay_code.jpg">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" target="_blank" rel="noopener" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/11/07/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/&title=《Mysql数据库知识点总结》 — gyk&pic=http://yoursite.comimages/logo.png" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" target="_blank" rel="noopener" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/11/07/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/&title=《Mysql数据库知识点总结》 — gyk&source=MySQL是一种开放源代码的关系型数据库管理系统（RDBMS），使用最常用的数据库管理语言–结构化查询语言（SQL）进行数据库管理。
+MySQL是开放源代..." data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/11/07/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Mysql数据库知识点总结》 — gyk&url=http://yoursite.com/2019/11/07/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/&via=http://yoursite.com" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/11/07/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" target="_blank" rel="noopener" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2019/11/07/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2019/11/06/Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">Github博客搭建</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2019 gyk<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://yoursite.com",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            
+        </div>
+        <div id="sidebar-menu-box-tags">
+            
+        </div>
+    </div>
+    <a href="javascript:;" target="_blank" rel="noopener" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>Home</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>Archives</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/about">
+                    <i class="fa fa-user"></i><span>About</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;" target="_blank" rel="noopener">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>
